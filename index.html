@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shhh... A Secret for You 💭</title>
+  <style>
+    .nav-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 12px 24px;
+  background: #ff66a3;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.nav-btn:hover {
+  background: #d63384;
+}
+    body {
+      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      color: #d63384;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+    input {
+      padding: 0.7rem 1rem;
+      border: 2px solid #d63384;
+      border-radius: 10px;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #d63384;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #b3005a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shhh... 💌</h1>
+  <p>This page hides something special.<br><em>Whose name is still softly written on your heart?</em></p>
+  <input type="text" id="code" placeholder="Enter the name...">
+  <button onclick="checkCode()">Unlock</button>
+
+  <script>
+    function checkCode() {
+      var code = document.getElementById('code').value.toLowerCase();
+      if(code === "anu") {
+        window.location.href = "page2.html";
+      } else {
+        alert("Hmm... that's not quite it.");
+      }
+    }
+  </script>
+  <div style="margin-top: 3rem;">
+  <a href="surprise.html" class="nav-btn">One Last Thing... 💘</a>
+</div>
+</body>
+</html>

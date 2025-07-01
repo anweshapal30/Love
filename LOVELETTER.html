@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>From Anwesha to Midhun 💌</title>
+  <style>
+    .nav-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 12px 24px;
+  background: #ff66a3;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.nav-btn:hover {
+  background: #d63384;
+}
+    .heart-image {
+  width: 500px;
+  max-width: 90vw;
+  display: block;
+  margin: 2rem auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  animation: heartbeat 1.8s ease-in-out infinite;
+  transform-origin: center center;
+  filter: drop-shadow(0 0 10px #ff66a3);
+}
+  @keyframes heartbeat {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+    filter: drop-shadow(0 0 10px #ff66a3);
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+    filter: drop-shadow(0 0 20px #ff1493);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+    filter: drop-shadow(0 0 10px #ff66a3);
+  }
+}
+h1 {
+  animation: softPulse 2.2s ease-out 1;
+}
+
+  
+    body {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 2rem;
+      color: #333;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #d63384;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+      color: #6c757d;
+    }
+    .heart {
+      font-size: 4rem;
+      animation: pulse 1s infinite;
+      margin-bottom: 1rem;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+    .msg-box {
+      background: white;
+      padding: 1.8rem;
+      border-radius: 20px;
+      max-width: 700px;
+      margin: 2rem auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      font-size: 1.3rem;
+      line-height: 1.8;
+    }
+    .photo {
+      width: 90%;
+      max-width: 500px;
+      margin: 1rem auto;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .secret {
+      margin-top: 25px;
+      padding: 12px 24px;
+      background: #d63384;
+      color: white;
+      border: none;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .secret:hover {
+      background: #c2185b;
+    }
+    .hidden-msg {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.3rem;
+      background: #fff0f5;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px dashed #d63384;
+    }
+    .timeline {
+      margin: 2rem auto;
+      text-align: left;
+      max-width: 600px;
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      font-size: 1.2rem;
+    }
+    .timeline h3 {
+      color: #d63384;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .timeline ul {
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+    .timeline li::before {
+      content: "🌸 ";
+    }
+    .timeline li {
+      margin: 10px 0;
+    }
+    .letter-box {
+    background: #fffafc;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 3rem auto;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    border: 2px dashed #ff69b4; /* soft pink dashed border */
+    position: relative;
+    animation: glowBorder 3s ease-in-out infinite alternate;
+}
+@keyframes glowBorder {
+  from {
+    box-shadow: 0 0 10px #ffcce5, 0 0 20px #ffaad4;
+  }
+  to {
+    box-shadow: 0 0 20px #ff66b2, 0 0 35px #ff3399;
+  }
+}
+    .ps-message {
+      margin-top: 3rem;
+      font-size: 1.4rem;
+      color: #b3005a;
+      font-style: italic;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff80bf; }
+      to { text-shadow: 0 0 15px #ff1493; }
+    }
+    .falling-hearts span {
+      position: fixed;
+      top: -50px;
+      animation: fall linear infinite;
+      font-size: 1.5rem;
+      color: #ff69b4;
+      user-select: none;
+      z-index: 0;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+    .audio-btn {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="falling-hearts">
+    <span style="left:5%; animation-duration: 7s;">💖</span>
+    <span style="left:15%; animation-duration: 10s;">💕</span>
+    <span style="left:25%; animation-duration: 8s;">💞</span>
+    <span style="left:35%; animation-duration: 9s;">💘</span>
+    <span style="left:45%; animation-duration: 6s;">💓</span>
+    <span style="left:55%; animation-duration: 12s;">💗</span>
+    <span style="left:65%; animation-duration: 7.5s;">💖</span>
+    <span style="left:75%; animation-duration: 10.5s;">💕</span>
+    <span style="left:85%; animation-duration: 9.2s;">💘</span>
+    <span style="left:95%; animation-duration: 8.4s;">💓</span>
+  </div>
+
+  <div class="heart">❤️</div>
+  <h1>To Kuchupuchu, from Anu 💌</h1>
+  <h2>This isn't just a page... it's the voice of my heart</h2>
+  <p id="typedText" style="font-size: 1.2rem; color: #b3005a; margin-top: 1rem;"></p>
+  <img src="https://i.postimg.cc/YCYSCyzS/anu-midhun-heart-transparent.png" alt="Us in Heart" class="heart-image">
+
+
+  <div class="msg-box">
+    <p>Hi baby,</p>
+    <p>Sometimes, words fall short. Sometimes, silence stretches too long. But in the spaces in between, my heart still whispers your name.</p>
+    <p>Maybe we’ve drifted, maybe things have changed... but what hasn’t changed is the way I still think of you before falling asleep. The way I still wish it was your hand in mine during the quiet moments.</p>
+    <p>This page is more than just HTML and code — it’s made of memories, moments, hopes, and all the love I still hold for you.</p>
+    <p>If your heart is tired, let mine hold it for a while. I'm still here. Always will be.</p>
+  </div>
+
+  <button class="secret" onclick="showMessage()">Click here if your heart hurts 💔</button>
+  <div id="hiddenMsg" class="hidden-msg">
+    You don’t need to be okay every day.  
+    <br>Just remember — there’s someone who still smiles at your name.  
+    <br><strong>It’s me. Your Anu. Waiting. Loving. Still yours.</strong>
+  </div>
+
+  <div class="timeline">
+    <h3>💞 Our Little Love Story</h3>
+    <ul>
+      <li>The first time you texted me... I read it 10 times just to smile.</li>
+      <li>When you said something silly and I laughed too hard... I knew I felt safe.</li>
+      <li>The nights we stayed up talking about life — they still echo in my mind.</li>
+      <li>Your silence sometimes speaks louder than words, but I always listened anyway.</li>
+      <li>Even now, every beautiful moment makes me wish you were beside me.</li>
+      <li>I still want you to know — no matter what — you're irreplaceable.</li>
+    </ul>
+  </div>
+
+  <div class="letter-box">
+    <h3>&#128221; A Letter from Anu</h3>
+    <p style="font-family: cursive; font-size: 1.3rem;">
+      If I could, I’d write this on rose petals and send it floating your way.<br><br>
+      I still believe in us. In the way we once laughed. In the way you held me.<br>
+      Come back, not because you miss me — but because you still feel what we had.<br><br>
+      <em>Forever yours,</em><br><strong>Anu 🌸</strong>
+    </p>
+  </div>
+
+  <div class="audio-btn">
+    <audio controls>
+      <source src="anu_voice.mp4" type="audio/mp4">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="ps-message">
+    P.S. I still believe in us. Always. 🌷
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('hiddenMsg').style.display = 'block';
+    }
+    const message = "And if you're reading this... maybe a part of you still cares.";
+let i = 0;
+function typeWriter() {
+  if (i < message.length) {
+    document.getElementById("typedText").innerHTML += message.charAt(i);
+    i++;
+    setTimeout(typeWriter, 60);
+  }
+}
+window.onload = typeWriter;
+  </script>
+<div style="margin-top: 3rem;">
+  <a href="index.html" class="nav-btn">Start the Journey 💞</a>
+</div>
+</body>
+</html>
