@@ -1,48 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>To Midhun, from Anu 💘</title>
   <style>
-    .fade-glow {
-  animation: fadeInGlow 2.5s ease forwards;
-  opacity: 0;
-}
-
-@keyframes fadeInGlow {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-    box-shadow: 0 0 0px rgba(108, 160, 220, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    box-shadow: 0 0 15px rgba(108, 160, 220, 0.3);
-  }
-}
-    .questions-box {
-  background: #fff0f8;
-  padding: 1.5rem;
-  border-radius: 20px;
-  max-width: 680px;
-  margin: 3rem auto;
-  font-size: 1.2rem;
-  line-height: 1.7;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-  border-left: 4px solid #ff66a3;
-}
-.questions-box ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.questions-box li::before {
-  content: "🌸 ";
-  margin-right: 8px;
-  color: #ff69b4;
-}
     body {
       background: linear-gradient(to top left, #fff0f5, #ffe4ec);
       font-family: 'Segoe UI', sans-serif;
@@ -50,20 +12,23 @@
       padding: 2rem;
       color: #333;
     }
+
     h1 {
       font-size: 2.8rem;
       color: #d63384;
     }
+
     .msg {
       background: white;
       padding: 2rem;
       border-radius: 20px;
       max-width: 700px;
       margin: 2rem auto;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       font-size: 1.3rem;
       line-height: 1.7;
     }
+
     .ps {
       margin-top: 2rem;
       font-style: italic;
@@ -71,95 +36,169 @@
       font-size: 1.2rem;
       animation: glow 2s ease-in-out infinite alternate;
     }
-    .open-door {
-  font-size: 2.6rem;
-  font-weight: bold;
-  color: #ff007f;
-  margin-top: 2rem;
-  animation: pulse-door 2s infinite;
-  text-shadow: 2px 2px 8px #ffc0cb;
-}
 
-@keyframes pulse-door {
-  0%, 100% {
-    transform: scale(1);
-    text-shadow: 2px 2px 10px #ff80bf;
-  }
-  50% {
-    transform: scale(1.1);
-    text-shadow: 2px 2px 20px #ff1493;
-  }
-}
+    .questions-box {
+      background: #fff0f8;
+      padding: 1.5rem;
+      border-radius: 20px;
+      max-width: 680px;
+      margin: 3rem auto;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+      border-left: 4px solid #ff66a3;
+    }
+
+    .questions-box ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .questions-box li::before {
+      content: "🌸 ";
+      margin-right: 8px;
+      color: #ff69b4;
+    }
+
+    .fade-glow {
+      animation: fadeInGlow 2.5s ease forwards;
+      opacity: 0;
+      will-change: opacity, transform;
+    }
+
+    @keyframes fadeInGlow {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+        box-shadow: 0 0 0px rgba(108, 160, 220, 0);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        box-shadow: 0 0 15px rgba(108, 160, 220, 0.3);
+      }
+    }
+
+    .open-door {
+      font-size: 2.6rem;
+      font-weight: bold;
+      color: #ff007f;
+      margin-top: 2rem;
+      animation: pulse-door 2s infinite;
+      text-shadow: 2px 2px 8px #ffc0cb;
+    }
+
+    @keyframes pulse-door {
+      0%, 100% {
+        transform: scale(1);
+        text-shadow: 2px 2px 10px #ff80bf;
+      }
+      50% {
+        transform: scale(1.1);
+        text-shadow: 2px 2px 20px #ff1493;
+      }
+    }
 
     @keyframes glow {
       from { text-shadow: 0 0 6px #ff80bf; }
       to { text-shadow: 0 0 16px #ff1493; }
     }
-    .nav-btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 12px 24px;
-  background: #ff66a3;
-  color: white;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: background 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.nav-btn:hover {
-  background: #d63384;
-}
 
+    .nav-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 12px 24px;
+      background: #ff66a3;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-btn:hover {
+      background: #d63384;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .msg {
+        padding: 1.2rem;
+        font-size: 1rem;
+      }
+
+      .questions-box {
+        padding: 1.2rem;
+        font-size: 1rem;
+      }
+
+      .open-door {
+        font-size: 2rem;
+      }
+
+      .nav-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>Surprise 💞</h1>
+
   <div class="msg">
     <p>You remembered my name... and that means more than you know.</p>
     <p>If this little page could hug you, it would.</p>
     <p>I still smile at your name, still replay our moments, and still wish the best for us — no matter where we stand.</p>
     <p>Forever in a corner of my heart, it's still you, Midhun.</p>
   </div>
+
   <div class="ps">P.S. This secret page will always be yours. 🌷</div>
+
   <div class="questions-box">
-  <h3 style="color: #d63384; margin-bottom: 1rem;">💞 If You Let Your Heart Answer...</h3>
-  <ul>
-    <li>Who promised to come with you to other colleges... just to cheer for you louder than anyone?</li>
-    <li>Who knew your mood just from your ‘Hi’?</li>
-    <li>Who knew what you were feeling... just by looking at your texts?</li>
-    <li>Who was the girl cheering for you from the sidelines when you were winning those tournaments?</li>
-    <li>Who held onto your good and bad like both were sacred?</li>
-    <li>Who stayed awake even on her worst days just to hear how your day went?</li>
-    <li>Who believed in you when you didn’t believe in yourself?</li>
-    <li>Who made you realize that people were taking advantage of you — making you get nothing in return?</li>
-    <li>Who was the girl who said you don’t look dull, even on your worst days?</li>
-    <li>Who smiled every time you walked into the room?</li>
-    <li>Who was the girl who kept tracking your flight while you were flying?</li>
-    <li>Who was the girl who cried just because you were leaving for Dubai?</li>
-  </ul>
-</div>
+    <h3 style="color: #d63384; margin-bottom: 1rem;">💞 If You Let Your Heart Answer...</h3>
+    <ul>
+      <li>Who promised to come with you to other colleges... just to cheer for you louder than anyone?</li>
+      <li>Who knew your mood just from your ‘Hi’?</li>
+      <li>Who knew what you were feeling... just by looking at your texts?</li>
+      <li>Who was the girl cheering for you from the sidelines when you were winning those tournaments?</li>
+      <li>Who held onto your good and bad like both were sacred?</li>
+      <li>Who stayed awake even on her worst days just to hear how your day went?</li>
+      <li>Who believed in you when you didn’t believe in yourself?</li>
+      <li>Who made you realize that people were taking advantage of you — making you get nothing in return?</li>
+      <li>Who was the girl who said you don’t look dull, even on your worst days?</li>
+      <li>Who smiled every time you walked into the room?</li>
+      <li>Who was the girl who kept tracking your flight while you were flying?</li>
+      <li>Who was the girl who cried just because you were leaving for Dubai?</li>
+    </ul>
+  </div>
+
   <div class="questions-box fade-glow" style="background: #f0f8ff; border-left: 4px solid #6ca0dc;">
-  <h3 style="color: #2f5d99; margin-bottom: 1rem;">💙 Who Was That Guy?</h3>
-  <ul>
-    <li>Who was the guy who always called me ‘my girl’ with that proud smile?</li>
-    <li>Who was the guy who kept checking if I had eaten or taken my meds?</li>
-    <li>Who was the guy who hugged me so tight I forgot the world?</li>
-    <li>Who was the guy who stayed up till 3 AM just to hear my rants?</li>
-    <li>Who was the guy who held my hand like I was the most precious thing ever?</li>
-    <li>Who was the guy who said "You’re not alone, not while I’m here"?</li>
-    <li>Who was the guy who gave me the courage to speak up, even when I was trembling?</li>
-    <li>Who was the guy who kissed my forehead just to calm me down?</li>
-    <li>Who was the guy who said, “You don’t have to be perfect — just be mine”?</li>
-    <li>Who was the guy who made me believe in love again?</li>
-  </ul>
-</div>
+    <h3 style="color: #2f5d99; margin-bottom: 1rem;">💙 Who Was That Guy?</h3>
+    <ul>
+      <li>Who was the guy who always called me ‘my girl’ with that proud smile?</li>
+      <li>Who was the guy who kept checking if I had eaten or taken my meds?</li>
+      <li>Who was the guy who hugged me so tight I forgot the world?</li>
+      <li>Who was the guy who stayed up till 3 AM just to hear my rants?</li>
+      <li>Who was the guy who held my hand like I was the most precious thing ever?</li>
+      <li>Who was the guy who said "You’re not alone, not while I’m here"?</li>
+      <li>Who was the guy who gave me the courage to speak up, even when I was trembling?</li>
+      <li>Who was the guy who kissed my forehead just to calm me down?</li>
+      <li>Who was the guy who said, “You don’t have to be perfect — just be mine”?</li>
+      <li>Who was the guy who made me believe in love again?</li>
+    </ul>
+  </div>
+
   <div style="margin-top: 3rem;">
-  <p style="font-size: 1.6rem; color: #b3005a; font-style: italic; font-weight: 500; animation: glow 2s ease-in-out infinite alternate;">
-    I loved you yesterday. I love you today. I will love you forever.
-  </p>
-  <a href="index.html" class="nav-btn">Back to the Letter 🔁</a>
-</div>
+    <p style="font-size: 1.6rem; color: #b3005a; font-style: italic; font-weight: 500; animation: glow 2s ease-in-out infinite alternate;">
+      I loved you yesterday. I love you today. I will love you forever.
+    </p>
+    <a href="index.html" class="nav-btn">Back to the Letter 🔁</a>
+  </div>
 </body>
 </html>
