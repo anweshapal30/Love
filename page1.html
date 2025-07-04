@@ -1,26 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shhh... A Secret for You 💭</title>
   <style>
-    .nav-btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 12px 24px;
-  background: #ff66a3;
-  color: white;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: background 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-.nav-btn:hover {
-  background: #d63384;
-}
     body {
       background: linear-gradient(to right, #ffe6f0, #fff0f5);
       font-family: 'Segoe UI', sans-serif;
@@ -28,26 +12,55 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
+      padding: 2rem;
       text-align: center;
       color: #d63384;
     }
+
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
+
+    .typewriter {
+      font-size: 1rem;
+      font-style: italic;
+      color: #b3005a;
+      margin-bottom: 2rem;
+      height: 24px;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #ff80bf;
+      animation: typing 4s steps(40, end), blink 0.8s step-end infinite alternate;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      from { border-color: transparent }
+      to { border-color: #ff80bf }
+    }
+
     p {
       font-size: 1.2rem;
       color: #555;
     }
+
     input {
       padding: 0.7rem 1rem;
       border: 2px solid #d63384;
       border-radius: 10px;
       font-size: 1rem;
       margin-top: 1rem;
+      max-width: 250px;
+      width: 100%;
     }
+
     button {
       margin-top: 1rem;
       padding: 0.6rem 1.2rem;
@@ -58,14 +71,45 @@
       font-size: 1rem;
       cursor: pointer;
     }
+
     button:hover {
       background: #b3005a;
+    }
+
+    .nav-btn {
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: 12px 24px;
+      background: #ff66a3;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .nav-btn:hover {
+      background: #d63384;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .typewriter {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Shhh... 💌</h1>
+  <div class="typewriter">Only the right name opens the right door...</div>
+
   <p>This page hides something special.<br><em>Whose name is still softly written on your heart?</em></p>
+
   <input type="text" id="code" placeholder="Enter the name...">
   <button onclick="checkCode()">Unlock</button>
 
@@ -79,8 +123,7 @@
       }
     }
   </script>
-  <div style="margin-top: 3rem;">
+
   <a href="page2.html" class="nav-btn">One Last Thing... 💘</a>
-</div>
 </body>
 </html>
